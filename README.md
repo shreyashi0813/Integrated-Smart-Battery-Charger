@@ -1,12 +1,11 @@
-# Integrated Smart Charging System — Patent Application Published
+# Integrated Smart Charging System 
 
 **Patent application:** 202541062114  
 **Publication date supplied:** 30 June 2025  
 **Title:** Integrated Smart Charging System
 
-An integrated smart charging system concept for miniature electronic devices, combining analog overcharge cut-off, ESP32-based monitoring, charging-time estimation, user feedback, and automatic redirection of power to a secondary USB-connected device.
+An integrated smart charging system concept for miniature electronic devices, combining analog overcharge cut-off, ESP32-based monitoring, charging-time estimation, and user feedback.
 
-> **Patent status:** The supplied project materials describe this as a published patent application. This README does not claim that a patent has been granted. Verify current legal status in the official patent register before making further status claims.
 
 ## Overview
 
@@ -48,14 +47,11 @@ Primary Li-ion Battery / Input Power
                            v
                     Charging-path control
                            |
-                    Full charge detected?
-                           |
-                           v
-              Switch output to secondary
-               USB-connected device/load
+                    Full charge detected
+                           
+            
 ```
 
-This is a simplified explanatory diagram based on the supplied patent specification, not a verified wiring diagram. Consult the approved circuit documentation before implementing hardware.
 
 ## Main Hardware Elements
 
@@ -67,7 +63,7 @@ This is a simplified explanatory diagram based on the supplied patent specificat
 | NE555 timer | Analog threshold / overcharge protection stage |
 | Potentiometer | Sets the analog reference threshold |
 | BC547 / BC548 transistor | Drives the relay-control path |
-| Relay module | Disconnects or switches the charging/power path |
+| Relay module |
 | ESP32 | Digital monitoring and supervisory control |
 | EEPROM | Stores historical charging-session data |
 | 16×2 LCD | Displays charging parameters and estimated time |
@@ -81,34 +77,10 @@ This is a simplified explanatory diagram based on the supplied patent specificat
 3. Use the NE555 threshold stage to trigger relay cut-off if the configured overvoltage threshold is crossed.
 4. Store charging-session information and estimate time to full charge using historical data, as described in the specification.
 5. Show live charging parameters and status on the LCD.
-6. On full-charge detection, switch the power path to a secondary USB-connected load.
-7. Trigger an audible warning and disconnect the relay output when abnormal conditions are detected.
+6. Trigger an audible warning and disconnect the relay output when abnormal conditions are detected.
 
-## Patent Application Information
 
-- **Title:** Integrated Smart Charging System
-- **Application number:** 202541062114
-- **Date supplied:** 30 June 2025
-- **Description supplied:** Patent published
 
-This repository is a technical portfolio summary, not the official patent record or legal advice. Confirm publication details and current status using the official Indian patent register. Do not describe the application as granted unless the official record confirms grant.
-
-## Repository Layout
-
-```text
-.
-├── README.md
-├── .gitignore
-├── docs/
-│   ├── patent-notes.md
-│   └── images/
-├── firmware/
-└── hardware/
-    ├── schematics/
-    └── pcb/
-```
-
-These are planned locations for source files and approved images. The repository should not imply that firmware or design files are present until they have actually been added.
 
 ## Safety and Scope
 
@@ -117,11 +89,7 @@ These are planned locations for source files and approved images. The repository
 - Verify the actual circuit, cell chemistry, component ratings, isolation, and charge-control method before connecting a real battery.
 - Publish only patent material and design artefacts that are publicly disclosed or approved for release.
 
-## Credits
 
-Based on the supplied complete specification titled *Integrated Smart Charging System*.
-
-This repository is a personal project portfolio entry and is not an official publication of any institution.
 
 ## License
 
