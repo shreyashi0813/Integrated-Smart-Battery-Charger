@@ -68,7 +68,7 @@ Primary Li-ion Battery / Input Power
 | EEPROM | Stores historical charging-session data |
 | 16×2 LCD | Displays charging parameters and estimated time |
 | Piezo buzzer | Audible fault alert |
-| USB Type-C connection | Connects the secondary device/load |
+
 
 ## Operating Sequence
 
